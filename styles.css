@@ -1,0 +1,206 @@
+body {
+  font-family: 'Cursive', Arial, sans-serif;
+  background-color: #ffe6e6;
+  color: #b30000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 40px auto;
+  background-color: #fff0f0;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#gato-img, #dog-img {
+  margin-top: 25px;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 20px auto;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ff6666;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff1a1a;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.scene {
+  margin-bottom: 30px;
+}
+
+#scene-3 .datetime-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#scene-3 .datetime-container input {
+  width: 60%;
+}
+
+#scene-3 #siguiente-button {
+  margin-top: 30px;
+  width: 80%;
+}
+
+input[type="date"], input[type="time"], input[type="range"] {
+  width: 60%;
+  padding: 10px;
+  border: 2px solid #ff9999;
+  border-radius: 10px;
+  background-color: #ffe6e6;
+  color: #b30000;
+  font-size: 14px;
+}
+
+.opciones-comida, .opciones-pelicula {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.opcion-comida, .opcion-pelicula {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.opcion-comida:hover, .opcion-pelicula:hover {
+  transform: scale(1.3);
+}
+
+.seleccionada {
+  border: 3px solid #ff6666;
+  box-shadow: 0 0 15px rgba(255, 102, 102, 0.5);
+}
+
+/* Barra de emoción personalizada */
+#emocionada-input {
+  width: 50%;
+  margin: 20px auto;
+  appearance: none;
+  height: 20px;
+  border-radius: 10px;
+  outline: none;
+  background: linear-gradient(90deg, #ff4d4d 0%, #ffe6e6 0%); /* Fondo dinámico que se llenará */
+  transition: background 0.3s ease;
+}
+
+/* Actualización del fondo dinámico conforme se avanza en la barra */
+#emocionada-input::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #ff4d4d var(--progress), #ffe6e6 var(--progress));
+}
+
+/* Estilos del puntero (thumb) */
+#emocionada-input::-webkit-slider-thumb {
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  background: url("imgs/icon-heart.png");
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+#emocionada-input::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+#emocionada-input::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  background: url('imgs/icon-heart.png');
+  background-size: cover;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Corazones flotando */
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('imgs/heartfila.jpg') no-repeat center;
+  background-size: cover;
+  animation: float 1.5s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Estilos para el confeti */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  animation: fall 2s ease-in-out forwards;
+  opacity: 0;
+  z-index: 2;
+}
+
+@keyframes fall {
+  from {
+      transform: translateY(-50px) rotate(0);
+      opacity: 1;
+  }
+  to {
+      transform: translateY(300px) rotate(720deg);
+      opacity: 0;
+  }
+}
+
+p {
+  font-family: 'Cursive', Arial, sans-serif;
+  font-size: 18px;
+  color: #b30000;
+}
+
+img {
+  margin-top: 90px;
+  max-width: 90px;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  margin: 30px auto;
+}

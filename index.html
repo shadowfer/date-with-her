@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quieres Salir conmigo?</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="imgs/icons8-me-gusta-relleno-96.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <div class="scene" id="scene-1">
+      <h1>¿Quieres salir a una cita?</h1>
+      <img src="imgs/gato.jpeg" alt="Gato" id="gato-img">
+      <button id="si-button">Sí</button>
+      <button id="no-button" disabled>No</button>
+    </div>
+    
+    <div class="scene" id="scene-2" style="display: none;">
+      <h1>No te vayas</h1>
+      <img src="imgs/saddog.jpeg" alt="Dog" id="dog-img">
+      <button id="click-me-button">Continua porfa:c</button>
+    </div>
+    
+    <div class="scene" id="scene-3" style="display: none;">
+      <h1>¿Cuándo estás libre?</h1>
+      <div class="datetime-container">
+        <input type="date" id="fecha-input">
+        <input type="time" id="hora-input">
+        <button id="siguiente-button">Siguiente</button>
+      </div>
+    </div>
+    
+    <div class="scene" id="scene-4" style="display: none;">
+      <h1>¿Qué comida te gustaría?</h1>
+      <div class="opciones-comida">
+        <img src="imgs/hm.jpeg" alt="Comida 1" data-name="Hamburguesas" class="opcion-comida">
+        <img src="imgs/sushi.jpg" alt="Comida 2" data-name="Sushi" class="opcion-comida">
+        <img src="imgs/pasta.jpeg" alt="Comida 3" data-name="Pasta" class="opcion-comida">
+      </div>
+      <button id="continuar-button">Continuar</button>
+    </div>
+    
+    <div class="scene" id="scene-5" style="display: none;">
+      <h1>¿Qué película te gustaría ver?</h1>
+      <div class="opciones-pelicula">
+        <img src="imgs/tspeli.jpeg" alt="Película 1" data-name="Taylor Swift" class="opcion-pelicula">
+        <img src="imgs/caropeli.jpg" alt="Película 2" data-name="Caroline" class="opcion-pelicula">
+        <img src="imgs/hppeli.jpg" alt="Película 3" data-name="Harry Potter" class="opcion-pelicula">
+      </div>
+      <button id="continuar-button-2">Continuar</button>
+    </div>
+    
+    <div class="scene" id="scene-6" style="display: none;">
+      <h1>¿Cuánto estás emocionada?</h1>
+      <input type="range" id="emocionada-input" min="0" max="100">
+      <button id="continuar-button-3">Continuar</button>
+    </div>
+    
+    <div class="scene" id="scene-7" style="display: none;">
+      <h1>Nos vemos pronto Mi amor ❣️ </h1>
+      <p>Fecha: <span id="fecha-output"></span></p>
+      <p>Hora: <span id="hora-output"></span></p>
+      <p>Perfecta eleccion de comida: <span id="comida-output"></span></p>
+      <img id="comida-img-output" alt="Imagen de la comida seleccionada">
+      <p>Que buena pelicula: <span id="pelicula-output"></span></p>
+      <img id="pelicula-img-output" alt="Imagen de la película seleccionada">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
